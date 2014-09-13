@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/style3.css" type="text/css"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<td>
+			<ul>
+				<li><a href="#">Books</a>
+					<ul>
+						<li><a href="#" id="webd">Web Development</a></li>
+						<li><a href="#" id="pgmng">Progamming</a></li>
+						<li><a href="#" id="datab">RDBMS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+		<td valign="top">
+			<p class="web">web sjdjkajsfkjkajskdjfjjksjldf</p>
+			<p class="prog">prog ajsfkjabcdefkljfkksdf</p>
+			<p class="rdms">rdms ajdkfjksjdakf</p>
+
+		</td>
+
+	</table>
+	
+
+<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.web').hide();
+		$('.prog').hide();
+		$('.rdms').hide();
+
+		$("#webd").hover(
+			function(event){
+				$('.web').show();
+				$('.prog').hide();
+				$('.rdms').hide();
+				$('#webd').addClass('hover');
+
+			},
+			function (){
+				$('#webd').removeClass('hover');
+			}
+		);
+        $('#pgmng').hover(
+                function(event){
+                    $('.web').hide();
+                    $('.prog').show();
+                    $('.rdms').hide();
+                    $('#pgmng').addClass('hover');
+                },
+                function () {
+                    $('#pgmng').removeClass('hover');
+                }
+
+        );
+        $('#datab').hover(
+                function(event){
+                    $('.web').hide();
+                    $('.prog').hide();
+                    $('.rdms').show();
+                    $('#datab').addClass('hover');
+                },
+                function () {
+                    $('#datab').removeClass('hover');
+                }
+
+        );
+
+
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Members of my Group are </h1>
+<span class="bold buttons">Add</span>
+<span class="italic buttons">Remove</span>
+<br />
+<div></div>
+<p></p>
+<script src="jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	alert("Js start!");
+	$(document).ready(
+			function(){
+				var members=["John","Steve","Ben","Damon","Ian"];
+				members=$.map(members,function(n,i){return (i+1+"."+n.toUpperCase());});
+				$('p').html(members.join("<br />"));
+				
+				/*$('.buttons').click(function(){
+					$(this).toggleClass('hover');
+				});*/
+				$('.bold').click(function{
+					$('div').pretend('<p>sdgfjahsdjfhjhsdf</p>');
+				});
+				$('.italic').click(function{
+					$('.p').remove();
+				}));
+			}
+	);
+</script>
+</body>
+</html>

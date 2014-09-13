@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/style2.css" type="text/css"/>
+<title>Insert title here</title>
+</head>
+<body>
+<span class="bold buttons">Bold</span>
+<span class="italic buttons">Italic</span>
+<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	// alert("Js start!");
+	$(document).ready(
+			function(){
+				$('.buttons').hover(
+					function(event){
+						$(this).addClass("hover");
+						var $txt=$(this).text();
+						$('<span class="showtip">This is '+$txt+'menu</span>').appendTo($(this));
+					},
+					function(){
+						$(this).removeClass('hover');
+						$('.showtip').remove();
+					}
+				);
+			}
+	);
+</script>
+</body>
+</html>
